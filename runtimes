@@ -1,0 +1,114 @@
+SAS AMIGA 68000 Profile Analyzer V6.0
+Copyright © 1992 SAS Institute Inc.  All Rights Reserved.
+Profile Statistics for ptrace
+46229 run + 4449 ready + 34901 wait = 85579
+ 54.0110% run,   5.198% ready,  40.782% wait
+ 17.184% samples (7944) out of profile range
+
+counted = 36548, RUN - NonTable 7944
+
+Routine %   Total % Offset     Hits   Label
+ 44.1693%  44.1693%   ad80    16143 _vx_IntersectVoxel [lines 209-323 in voxel.c]
+				      Most hits -  7.1221% (2603) on line 230
+ 20.3759%  64.5453%   8320     7447 _tr_IsRayIntersect [lines 296-427 in triangle.c]
+				      Most hits -  2.9469% (1077) on line 353
+ 13.8503%  78.3955%   a2be     5062 _pl_IsRayIntersect [lines 222-255 in plane.c]
+				      Most hits -  5.3956% (1972) on line 235
+  5.8526%  84.2481%  1168a     2139 _acid [lines 953-151 in texture_tools.c]
+				      Most hits -  0.5499% (201) on line 1089
+  2.6596%  86.9077%   c28c      972 _im_ProcessFlatMap [lines 114-320 in mapping.c]
+				      Most hits -  0.1779% (65) on line 234
+  2.2244%  89.1321%   5a2a      813 _pt_GetInternalVoxelIntersection [lines 113-157 in intersect.c]
+				      Most hits -  0.3666% (134) on line 139
+  2.0385%  91.1706%   5838      745 _pt_GetIntersection [lines 13-76 in intersect.c]
+				      Most hits -  0.4324% (158) on line 49
+  1.7374%  92.90710%   2b6a      635 _pt_GetShadowIntersection [lines 61-232 in shadows.c]
+				      Most hits -  0.3091% (113) on line 61
+  1.7073%  94.6153%   7ab8      624 _tr_IsVoxelIntersect [lines 76-293 in triangle.c]
+				      Most hits -  0.1068% (39) on line 125
+  0.8810%  95.4963%   2f6e      322 _pt_ShadowCheckAlwaysTestList [lines 235-331 in shadows.c]
+				      Most hits -  0.3037% (111) on line 235
+  0.5280%  96.0245%   18a4      193 _normalize [lines 86-100 in math.c]
+				      Most hits -  0.1998% (73) on line 90
+  0.5061%  96.5306%   b1d4      185 _sh_Shade_Ray [lines 12-91 in shade_engine.c]
+				      Most hits -  0.1068% (39) on line 19
+  0.3612%  96.8918%   578c      132 _pt_InitRay [lines 135-153 in ray.c]
+				      Most hits -  0.0766% (28) on line 139
+  0.3037%  97.1955%   2a0c      111 _pt_FilterShadowRay [lines 11-57 in shadows.c]
+				      Most hits -  0.1340% (49) on line 27
+  0.3009%  97.4964%   1246      110 _pt_savepixel [lines 26-44 in framestore.c]
+				      Most hits -  0.0794% (29) on line 35
+  0.2872%  97.7838%   8ba6      105 _tr_SimpleIsRayIntersect [lines 430-512 in triangle.c]
+				      Most hits -  0.0547% (20) on line 463
+  0.2627%  98.0464%   62d8       96 _ProcessVoxel [lines 288-500 in voxelbuild.c]
+				      Most hits -  0.05110% (19) on line 361
+  0.2380%  98.2845%   5b44       87 _pt_GetNeighborVoxel [lines 160-428 in intersect.c]
+				      Most hits -  0.0820% (30) on line 428
+  0.2024%  98.4869%   a582       74 _vx_CheckLineIntersect [lines 41-206 in voxel.c]
+				      Most hits -  0.0165% (6) on line 109
+  0.1916%  98.6784%   6ee2       70 _lsh_PointSourceHandler [lines 22-43 in lights.c]
+				      Most hits -  0.0356% (13) on line 34
+  0.1395%  98.8179%   59d8       51 _pt_CheckAlwaysTestList [lines 80-103 in intersect.c]
+				      Most hits -  0.0684% (25) on line 101
+  0.1340%  98.9520%   b5a2       49 _sh_GetSecondaryRayContributions [lines 145-345 in shade_engine.c]
+				      Most hits -  0.0247% (9) on line 180
+  0.1258%  99.0779%   daf6       46 _getmapcolor [lines 426-435 in mapping.c]
+				      Most hits -  0.0410% (15) on line 430
+  0.1258%  99.2038%   e25a       46 _getmapRGB [lines 536-551 in mapping.c]
+				      Most hits -  0.0410% (15) on line 549
+  0.1232%  99.3269%   b54e       45 _sh_GetLightSourceContributions [lines 125-141 in shade_engine.c]
+				      Most hits -  0.0547% (20) on line 141
+  0.0601%  99.3872%   3240       22 _pt_CheckShadowCache [lines 334-353 in shadows.c]
+				      Most hits -  0.0301% (11) on line 353
+  0.0547%  99.4419%   17c0       20 _set_length [lines 70-82 in math.c]
+				      Most hits -  0.0547% (20) on line 82
+  0.0547%  99.4965%   352c       20 _IsListEmpty [lines 59-63 in lists.c]
+				      Most hits -  0.0547% (20) on line 61
+  0.05110%  99.5486%   6ec0       19 _lsh_AmbientSourceHandler [lines 14-18 in lights.c]
+				      Most hits -  0.0328% (12) on line 18
+  0.0465%  99.5950%   78d0       17 _tr_GetExtents [lines 12-71 in triangle.c]
+				      Most hits -  0.0083% (3) on line 54
+  0.0438%  99.6388%   56e2       16 _pt_trace_ray [lines 79-129 in ray.c]
+				      Most hits -  0.0136% (5) on line 86
+  0.0410%  99.6798%   9ce4       15 _pl_IsVoxelIntersect [lines 32-219 in plane.c]
+				      Most hits -  0.0054% (2) on line 32
+  0.0384%  99.7182%   512e       14 _attr_findattribute [lines 18-62 in attributes.c]
+				      Most hits -  0.0109% (4) on line 29
+  0.0356%  99.7538%   9126       13 _tr_InitTriangle [lines 515-557 in triangle.c]
+				      Most hits -  0.0136% (5) on line 519
+  0.0356%  99.7894%   b50c       13 _sh_GetModifiedColor [lines 109-122 in shade_engine.c]
+				      Most hits -  0.0165% (6) on line 118
+  0.0273%  99.8167%   34ac       10 _remtail [lines 13-26 in lists.c]
+				      Most hits -  0.0109% (4) on line 17
+  0.0273%  99.8440%   3590       10 _rayhandler_simple [lines 12-22 in eyerayhandlers.c]
+				      Most hits -  0.0165% (6) on line 12
+  0.0247%  99.8687%   34d4        9 _addtail [lines 29-41 in lists.c]
+				      Most hits -  0.0191% (7) on line 33
+  0.0219%  99.8905%    476        8 _pt_execute [lines 86-105 in ptrace.c]
+				      Most hits -  0.0083% (3) on line 101
+  0.0165%  99.9069%   66f2        6 _vx_PreprocessSubvoxels [lines 503-709 in voxelbuild.c]
+				      Most hits -  0.0054% (2) on line 537
+  0.0136%  99.9206%   32b4        5 _sm_SmoothObject [lines 11-52 in smooth.c]
+				      Most hits -  0.0028% (1) on line 23
+  0.0136%  99.9343%   5f64        5 _BuildRootVoxel [lines 115-277 in voxelbuild.c]
+				      Most hits -  0.0028% (1) on line 174
+  0.0109%  99.9453%   5e9c        4 _vxb_FreeVoxObj [lines 62-67 in voxelbuild.c]
+				      Most hits -  0.0109% (4) on line 62
+  0.0083%  99.9535%   3500        3 _addhead [lines 44-56 in lists.c]
+				      Most hits -  0.0083% (3) on line 44
+  0.0083%  99.9616%   4e7c        3 _skyshader_gradient [lines 23-47 in skyshaders.c]
+				      Most hits -  0.0054% (2) on line 27
+  0.0083%  99.9699%   5e6e        3 _vxb_GetFreeVoxObj [lines 41-59 in voxelbuild.c]
+				      Most hits -  0.0054% (2) on line 45
+  0.0083%  99.9781%   6e44        3 _FreeVoxelTree [lines 712-742 in voxelbuild.c]
+				      Most hits -  0.0054% (2) on line 721
+  0.0083%  99.9864%   d7ce        3 _im_ProcessEnvironmentMap [lines 389-423 in mapping.c]
+				      Most hits -  0.0083% (3) on line 423
+  0.0054%  99.9917%    934        2 _pt_FreeObject [lines 172-223 in init_env.c]
+				      Most hits -  0.0054% (2) on line 194
+  0.0028%  99.9946%   52c8        1 _pt_trace_fuzzyray [lines 14-75 in ray.c]
+				      Most hits -  0.0028% (1) on line 75
+  0.0028%  99.9972%   a504        1 _vx_CheckPointInVoxel [lines 10-36 in voxel.c]
+				      Most hits -  0.0028% (1) on line 36
+  0.0028% 100.0000%   e1ac        1 _getmapFVAL [lines 521-533 in mapping.c]
+				      Most hits -  0.0028% (1) on line 533

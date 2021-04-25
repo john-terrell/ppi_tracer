@@ -1,0 +1,114 @@
+LIB = lib:
+OBJ = obj/
+ASM = asm/
+CFLAGS =  AUTOREGISTER \
+          CPU=ANY \
+          PRECISION=MIXED \
+          NOICONS \
+          MEMORYSIZE=HUGE \
+          DATA=AUTO \
+          NOERRORREXX \
+          NMINC \
+          STRMERGE \
+          MATH=68881 \
+          IGNORE=89,147 \
+          NOSTKCHK \
+          OBJNAME=$(OBJ) \
+          NOVERSION \
+          OPT \
+          OPTTIME \
+          OPTLOOP \
+          OPTINL \
+          OPTPEEP \
+          NODEBUG \
+
+OBJECTS = \
+          $(OBJ)ptrace.o \
+          $(OBJ)init.o \
+          $(OBJ)init_env.o \
+          $(OBJ)init_database.o \
+          $(OBJ)framestore.o \
+          $(OBJ)scene_io.o \
+          $(OBJ)globals.o \
+          $(OBJ)math.o \
+          $(OBJ)shadows.o \
+          $(OBJ)smooth.o \
+          $(OBJ)lists.o \
+          $(OBJ)eyerayhandlers.o \
+          $(OBJ)skyshaders.o \
+          $(OBJ)attributes.o \
+          $(OBJ)ray.o \
+          $(OBJ)intersect.o \
+          $(OBJ)voxelbuild.o \
+          $(OBJ)lights.o \
+          $(OBJ)function_tables.o \
+          $(OBJ)triangle.o \
+          $(OBJ)sphere.o \
+          $(OBJ)plane.o \
+          $(OBJ)voxel.o \
+          $(OBJ)shade_engine.o \
+          $(OBJ)mapping.o \
+          $(OBJ)texture_tools.o \
+          $(OBJ)oem.o \
+          $(OBJ)imodel_strauss.o \
+          $(OBJ)io_PPI.o \
+          $(OBJ)io_Parser.o \
+          $(OBJ)io_Textures.o \
+          $(OBJ)fuzzy.o \
+          $(OBJ)backdrop.o \
+          $(OBJ)voxelsmooth.o \
+          $(OBJ)interphong.o \
+          $(OBJ)prefs.o \
+          $(OBJ)lightrender.o
+.c.o:
+  @echo "Compiling $*.c"
+  @sc $(CFLAGS) $*.c
+
+ptrace: $(OBJECTS)
+	@slink < with <
+
+BATCH
+TO ptrace
+FROM $(LIB)c.o $(OBJECTS)
+LIB lib:scm881.lib lib:sc.lib lib:amiga.lib
+ADDSYM
+<
+
+$(OBJ)ptrace.o:           ptrace.c
+$(OBJ)init.o:             init.c
+$(OBJ)init_database.o:    init_database.c
+$(OBJ)init_env.o:         init_env.c
+$(OBJ)framestore.o:       framestore.c
+$(OBJ)scene_io.o:         scene_io.c
+$(OBJ)globals.o:          globals.c
+$(OBJ)math.o:             math.c
+$(OBJ)shadows.o:          shadows.c
+$(OBJ)smooth.o:           smooth.c
+$(OBJ)lists.o:            lists.c
+$(OBJ)eyerayhandlers.o:   eyerayhandlers.c
+$(OBJ)skyshaders.o:       skyshaders.c
+$(OBJ)attributes.o:       attributes.c
+$(OBJ)ray.o:              ray.c
+$(OBJ)intersect.o:        intersect.c
+$(OBJ)voxelbuild.o:       voxelbuild.c
+$(OBJ)lights.o:           lights.c
+$(OBJ)function_tables.o:  function_tables.c
+$(OBJ)triangle.o:         triangle.c
+$(OBJ)sphere.o:           sphere.c
+$(OBJ)plane.o:            plane.c
+$(OBJ)voxel.o:            voxel.c
+$(OBJ)shade_engine.o:     shade_engine.c
+$(OBJ)mapping.o:          mapping.c
+$(OBJ)texture_tools.o:    texture_tools.c
+$(OBJ)oem.o:              oem.c
+$(OBJ)imodel_strauss.o:   imodel_strauss.c
+$(OBJ)io_PPI.o:           io_PPI.c
+$(OBJ)io_Parser.o:        io_Parser.c
+$(OBJ)io_Textures.o:      io_Textures.c
+$(OBJ)fuzzy.o:            fuzzy.c
+$(OBJ)backdrop.o:         backdrop.c
+$(OBJ)voxelsmooth.o:      voxelsmooth.c
+$(OBJ)interphong.o:       interphong.c
+$(OBJ)motionblur.o:       motionblur.c
+$(OBJ)prefs.o:            prefs.c
+$(OBJ)lightrender.o:      lightrender.c
